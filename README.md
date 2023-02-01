@@ -1,2 +1,2 @@
-# gauthamcsudheer.github.io
+# gauthamcsudheer.me
 My personal website
