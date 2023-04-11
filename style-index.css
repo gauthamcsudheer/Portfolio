@@ -727,6 +727,10 @@ section.contact form .btn:hover{
 
   /* ==================== About ======================== */
 
+  section.about {
+    margin: 0px 40px 40px;
+  }
+  
   section.about .container{
     padding: 10px;
     border-radius: 10px;
