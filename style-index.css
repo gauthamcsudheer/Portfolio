@@ -728,11 +728,11 @@ section.contact form .btn:hover{
   /* ==================== About ======================== */
 
   section.about {
-    margin: 0px 40px 40px;
+    margin: 0px 10px 40px;
   }
-  
+
   section.about .container{
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
   }
   
@@ -786,15 +786,15 @@ section.contact form .btn:hover{
 
   section.services {
     padding-top: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   section.services .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    margin: 10px 0px 0px;
     text-align: center;
   }
 
