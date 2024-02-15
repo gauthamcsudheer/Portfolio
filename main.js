@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.querySelector('.explore').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#connect').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('header ul li a');
@@ -31,3 +36,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+const carousel = document.querySelector('.carousel');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  const slides = carousel.querySelectorAll('img');
+  let currentSlide = 0;
+  slides[currentSlide].classList.add('active');
+  
+  prevBtn.addEventListener('click', () => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide--;
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    }
+    slides[currentSlide].classList.add('active');
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    slides[currentSlide].classList.remove('active');
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    slides[currentSlide].classList.add('active');
+  });
