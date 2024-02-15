@@ -155,7 +155,7 @@ img {
     line-height: 36px;
 }
 
-.left-side a, span {
+.landing .left-side a, .collab {
     color: #000;
     text-decoration: none;
     border-bottom: 3px dotted #333; /* Adjust as per your design */
