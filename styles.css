@@ -105,6 +105,10 @@ header.sticky {
     backdrop-filter: blur(16px);
 }
 
+a {
+    color: #000;
+}
+
 /* Main Content Styles */
 
 .about{
@@ -331,85 +335,116 @@ img {
     right: 0;
 }
 
+
+
+
+
+
 .connect {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: "Montserrat", sans-serif;
     background-image: url(./images/connect-bg.jpg);
+    height: 100vh;
 }
 
-#letsworktogether {
-    width: 50vw; /* Adjust width relative to viewport width */
-    padding: 20px;
+.columns {
+    display: flex;
+    padding-top: 10%;
+}
+
+.column {
+    flex: 1;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.contact-links {
+    order: 1;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 6%;
+    padding-left: 6%;
+    border-radius: 3vw;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.letsworktogether {
+    order: 2;
+    max-width: 40%;
+}
+
+.row {
+    margin-top: 2%;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons img {
+    max-width: 4vw;
+    max-height: 4vw;
+    margin-right: 40px;
+}
+
+.social-icons a, img:hover {
+    cursor: url('./images/hand.png'), auto;
+}
+
+.letsworktogether {
+    width: 50%;
+    padding: 2%;
     border: 1px solid #ddd;
-    border-radius: 16px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3vw;
+    box-shadow: 0 2vw 2.5vw rgba(0, 0, 0, 0.1);
     background-color: #f3f3f3;
+    margin: 0 auto;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     font-family: 'Single Day', cursive;
-    font-size: 3vw; /* Adjust font size relative to viewport width */
+    font-size: 2.5vw;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 1%;
 }
 
 input,
-select {
-    width: 90%;
-    margin-right: 10px;
-    padding: 10px;
-    margin-bottom: 15px;
+select,
+textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2%;
+    padding: 1%;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 1vw;
+    box-sizing: border-box;
 }
 
 textarea {
-    width: 90%;
-    height: 80px;
-    margin-right: 10px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
+    height: 60px;
 }
 
 .submit-button {
     display: flex;
     justify-content: center;
+    height: 40px;
 }
 
 .submit-button button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 1% 2%;
     border: none;
-    border-radius: 5px;
+    border-radius: 1vw;
     cursor: url('./images/hand.png'), auto;
 }
 
 .submit-button button:hover {
     background-color: #449A44;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-}
-
-.col {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.col:last-child {
-    margin-right: 0;
 }
