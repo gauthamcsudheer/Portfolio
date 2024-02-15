@@ -19,6 +19,11 @@ document.querySelector('.explore').addEventListener('click', function(e) {
     document.querySelector('#connect').scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
 
+document.querySelector('.collab').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#connect').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('header ul li a');

@@ -155,7 +155,9 @@ img {
     line-height: 36px;
 }
 
-.left-side span {
+.left-side a, span {
+    color: #000;
+    text-decoration: none;
     border-bottom: 3px dotted #333; /* Adjust as per your design */
     display: inline;
     transform: 300ms;
