@@ -1,0 +1,168 @@
+/* Your existing CSS styles */
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+:root {
+    --color-dark: #104515;
+    --color-primaryDark: #08cf26;
+    --color-primaryLight: #4b92ff;
+    --color-secondary: #b7e3ff;
+    --color-extra: #F0E6DC;
+    
+    --transition: all 300ms ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    cursor: url('./images/default.png'), auto;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    margin-top: -60px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(190, 220, 180, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.6s ease;
+    z-index: 2;
+}
+
+header img {
+    margin-left: 40px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+header ul li {
+    position: relative;
+    color: var(--color-dark);
+    font-family: 'Indie Flower', cursive;
+    font-size: 18px;
+    height: 20px;
+    list-style: none;
+    transition: scale 300ms;
+}
+
+header ul li::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    top: 110%;
+    left: 25%;
+    background-color: var(--color-primaryDark);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+header ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header ul li:hover {
+    scale: 120%;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--color-primary);
+    cursor: url('./images/hand.png'), auto;
+}
+
+header.sticky {
+    background-color: rgba(190, 220, 180, 0.2);
+    backdrop-filter: blur(16px);
+}
+
+/* Main Content Styles */
+
+.container {
+    display: flex;
+    margin-top: 60px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-side {
+    overflow: hidden;
+}
+
+.right-side img,
+.left-side {
+    animation: fadeIn 600ms ease-out;
+}
+
+img {
+    width: auto;
+    height: calc(100vh - 60px);
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-side {
+    flex: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.left-side h1 {
+    font-family: 'Single Day', cursive;
+    font-size: 72px;
+    text-align: center;
+    position: relative;
+}
+
+.left-side p {
+    width: 90%;
+    font-family: 'Single Day', cursive;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.left-side span {
+    border-bottom: 3px dotted #333; /* Adjust as per your design */
+    display: inline;
+    transform: 300ms;
+}
+
+.left-side span:hover {
+    cursor: url('./images/hand.png'), auto;
+    color: #08cf26;
+    border-bottom: 3px dotted #104515;
+}
+
+.introgif img{
+    height: calc(33.33vh + 40px);
+}
