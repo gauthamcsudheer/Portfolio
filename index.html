@@ -44,8 +44,6 @@
         </div>
     </section>
     
-    <!-- <div class="divider"> <img src="./images/line.png" alt="dividing-line"> </div> -->
-    
     <!-- Works section -->
     <section id="works" class="works">
         <h1>My Works</h1>
@@ -56,7 +54,8 @@
                 </div>
                 <div class="work-description">
                     <a href="https://youtu.be/nK1ue5w55CQ" target="_blank"><h2>Bank Management System</h2></a>
-                    <p>The Bank Management System, powered by Django, modernizes banking operations with secure account management and transparent transactions. It handles deposits, withdrawals, transfers, and transaction histories accurately. The system provides managerial tools for customer oversight, enhancing functionality, security, and reliability in banking.</p>
+                    <p>
+                        The Django-powered Bank Management System revolutionizes banking operations by ensuring secure account management and transparent transactions. It accurately handles key operations like deposits, withdrawals, transfers, and transaction histories. The system offers robust managerial tools for customer oversight, improving functionality, security, and reliability in banking operations.</p>
                 </div>
             </div>
             <div class="work">
@@ -70,11 +69,11 @@
             </div>
             <div class="work">
                 <div class="work-image">
-                    <img src="./images/rsms.png" alt="Work 3">
+                    <img src="./images/hackclub.png" alt="Work 3">
                 </div>
                 <div class="work-description">
-                    <a href="https://www.figma.com/file/tOcJ4dvWAHl1kWEstmVhYU/AddOn-StudentProfile?type=design&node-id=0%3A1&mode=design&t=rEwtLVJIKz0Tb77T-1" target="_blank"><h2>RSMS Redesign</h2></a>
-                    <p>The UI design for the Rajagiri Student Management System focuses on simplicity and efficiency, with a modern, intuitive interface for easy navigation. It maintains brand coherence and emphasizes usability, enabling efficient management of student records and course registrations to enhance user experience and productivity.</p>
+                    <a href="https://github.com/gauthamcsudheer/hack-club" target="_blank"><h2>Hack Club Website</h2></a>
+                    <p>The Hack Club website is a dynamic platform designed for a college club, offering features like event scheduling, team profiles, and interactive forums. Utilizing HTML, CSS, and JavaScript, the site enhances club engagement and communication. Its user-friendly interface and responsive design ensure accessibility across devices, fostering a cohesive online community for members to connect, collaborate, and stay updated with club activities.</p>
                 </div>
             </div>
         </div>
@@ -90,7 +89,34 @@
                 <h2>"Crafting elegant solutions, one line of code at a time"</h2>
                 <p>I'm a Computer Science & Engineering student at Rajagiri School of Engineering & Technology, driven to help others showcase their skills online. My projects have taught me to collaborate with diverse groups, improving my interpersonal skills. I've created websites focusing on life skills like teamwork and communication. Website and app development introduced me to the creative industry, inspiring my entrepreneurial ventures. I excel in front-end development and building strong client relationships, with a deep understanding of client service.</p>
             
-                <a href="./GauthamCSudheer_Resume.pdf" download="GauthamCSudheer"><button class="downloadCV">Download CV</button></a>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-label">HTML, CSS, JS</div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">C</div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">Java</div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-label">Djano</div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="openPdfInNewTab()">Open Resume</button>
                 <a href="#connect"><button class="explore">Connect</button></a>
             </div>
 
@@ -100,9 +126,9 @@
     
     <section id="certifications" class="certifications">
         <div class="carousel">
-            <img src="./certificates/crashcoursepython.png" alt="Certification 1" class="active">
-            <img src="./certificates/grasshopper.png" alt="Certification 2">
-            <img src="./certificates/pythonos.png" alt="Certification 3">
+            <img src="./certificates/elementsofai.png" alt="Certification 1" class="active">
+            <img src="./certificates/pythonos.png" alt="Certification 2">
+            <img src="./certificates/grasshopper.png" alt="Certification 3">
             <button class="prev"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
             <button class="next"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
           </div>
@@ -163,7 +189,11 @@
         </div>
     </section>
     
-
+    <script>
+        function openPdfInNewTab() {
+            window.open('./Resume.pdf', '_blank');
+        }
+        </script>
     <script src="main.js"></script>
 </body>
 </html>

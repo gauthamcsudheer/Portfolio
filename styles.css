@@ -16,9 +16,9 @@
 }
 
 :root {
-    --color-dark: #104515;
-    --color-primaryDark: #08cf26;
-    --color-primaryLight: #4b92ff;
+    --color-dark: #003b8b;
+    --color-primaryDark: #1741fd;
+    --color-primaryLight: #106ffc;
     --color-secondary: #b7e3ff;
     --color-extra: #F0E6DC;
     
@@ -109,11 +109,7 @@ a {
     color: #000;
 }
 
-/* Main Content Styles */
-
-.about{
-    padding-top: 1px;
-}
+/* ============= Landing ================ */
 
 .container {
     display: flex;
@@ -169,46 +165,15 @@ img {
 
 .left-side span:hover {
     cursor: url('./images/hand.png'), auto;
-    color: #08cf26;
-    border-bottom: 3px dotted #104515;
+    color: var(--color-primaryLight);
+    border-bottom: 3px dotted #101445;
 }
 
 .introgif img{
     height: calc(33.33vh + 40px);
 }
 
-.about h2 {
-    margin-top: 80px;
-    font-family: 'Single Day', cursive;
-    text-align: center;
-    position: relative;
-    font-size: 2.5vw; /* Adjust font size relative to viewport width */
-}
-
-.about p {
-    margin-top: 40px;
-    font-family: "Fredoka", sans-serif;
-}
-
-.about button {
-    width: 150px;
-    height: 50px;
-    border-radius: 16px;
-
-    margin-top: 40px;
-    margin-right: 60px;
-
-    font-family: "Fredoka", sans-serif;
-    font-size: 1.4vw; /* Adjust font size relative to viewport width */
-    color: #fff;
-    background-color: #4CAF50;
-    transition: 300ms;
-}
-
-.about button:hover {
-    background-color: #27cc40;
-    cursor: url('./images/hand.png'), auto;
-}
+/* ============= Work ================ */
 
 .works {
     padding: 40px;
@@ -278,6 +243,70 @@ img {
     line-height: 1.5vw; /* Adjust line height relative to viewport width */
 }
 
+/* ============= About ================ */
+
+.about{
+    padding-top: 1px;
+}
+
+.about h2 {
+    margin-top: 40px;
+    font-family: 'Single Day', cursive;
+    text-align: center;
+    position: relative;
+    font-size: 2.5vw; /* Adjust font size relative to viewport width */
+}
+
+.about p {
+    margin-top: 40px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.25vw;
+}
+
+.about button {
+    width: 200px;
+    height: 50px;
+    border-radius: 16px;
+
+    margin-top: 40px;
+    margin-right: 60px;
+    padding: 8px;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.4vw; /* Adjust font size relative to viewport width */
+    color: #fff;
+    background-color: var(--color-primaryDark);
+    transition: 300ms;
+}
+
+.about button:hover {
+    background-color: var(--color-primaryLight);
+    cursor: url('./images/hand.png'), auto;
+}
+
+.skills {
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.skill {
+    margin-bottom: 10px;
+}
+.skill-label {
+    margin-bottom: 5px;
+}
+.skill-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill-bar-fill {
+    height: 100%;
+    background-color: var(--color-primaryLight);
+    transition: width 1s ease-in-out;
+}
+
+/* ============= Certifications ================ */
+
 .certifications {
     padding: 20px;
     height: 100vh;
@@ -325,6 +354,7 @@ img {
 
 .carousel button:hover {
     scale: 110%;
+    cursor: url('./images/hand.png'), auto;
 }
 
 .carousel button.prev {
@@ -335,10 +365,7 @@ img {
     right: 0;
 }
 
-
-
-
-
+/* ============= Connect ================ */
 
 .connect {
     background-image: url(./images/connect-bg.jpg);
@@ -437,7 +464,7 @@ textarea {
 }
 
 .submit-button button {
-    background-color: #4CAF50;
+    background-color: var(--color-primaryDark);
     color: white;
     padding: 1% 2%;
     border: none;
@@ -446,5 +473,5 @@ textarea {
 }
 
 .submit-button button:hover {
-    background-color: #449A44;
+    background-color: #003b8b;
 }
