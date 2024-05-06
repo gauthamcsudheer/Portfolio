@@ -1,103 +1,116 @@
-/* Your existing CSS styles */
-@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
+@keyframes float {
+    0%, 100% {
+      transform: translateY(0);
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
+    50% {
+      transform: translateY(-6px);
     }
 }
 
-:root {
-    --color-dark: #003b8b;
-    --color-primaryDark: #1741fd;
-    --color-primaryLight: #106ffc;
-    --color-secondary: #b7e3ff;
-    --color-extra: #F0E6DC;
-    
-    --transition: all 300ms ease;
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #0B1215;
+    max-width: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;
-    cursor: url('./images/default.png'), auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFAFA;
+    overflow-x: hidden;
+}
+
+section {
+    padding-top: 6rem;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
 }
 
 header {
     display: flex;
     position: fixed;
-    margin-top: -60px;
-    width: 100%;
-    height: 60px;
-    background-color: rgba(190, 220, 180, 0.2);
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.6s ease;
+    width: 100%;
+    padding: 1rem;
     z-index: 2;
 }
 
-header img {
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin-left: 40px;
-    width: 50px;
-    border-radius: 50%;
+}
+
+header img {
+    width: 40px;
 }
 
 header ul {
-    position: relative;
     display: flex;
-    margin: 0 auto;
+    list-style-type: none;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 header ul li {
-    position: relative;
-    color: var(--color-dark);
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.2vw; /* Adjust font size relative to viewport width */
-    height: 20px;
-    list-style: none;
-    transition: scale 300ms;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    transition: transform 0.3s ease;
 }
 
-header ul li::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    transform: scaleX(0);
-    height: 2px;
-    top: 110%;
-    left: 25%;
-    background-color: var(--color-primaryDark);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+header ul li.active a {
+    color: #6699CC;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #FFFAFA;
 }
 
-header ul li:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+header ul li a{
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #FFFAFA;
 }
 
 header ul li:hover {
-    scale: 120%;
+    transform: scale(1.1);
 }
 
-header ul li a {
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: var(--color-primary);
-    cursor: url('./images/hand.png'), auto;
+
+header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    padding: 0.6rem;
+    margin-right: 40px;
+    gap: 1rem;
+    color: #0B1215;
+    background-color: #FFFAFA;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+header button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(255, 250, 250, 0.3);
+}
+
+header button span {
+    background-color: #FFFAFA;
 }
 
 header.sticky {
@@ -105,373 +118,475 @@ header.sticky {
     backdrop-filter: blur(16px);
 }
 
-a {
-    color: #000;
-}
+/* ===================================== Landing ===================================== */
 
-/* ============= Landing ================ */
-
-.container {
+.landing .container {
     display: flex;
-    margin-top: 60px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.right-side {
-    overflow: hidden;
+.landing .container .right-side img {
+    border-radius: 2rem;
+    height: 75vh;
+    
+    animation: float 3s ease-in-out infinite;
 }
 
-.right-side img,
-.left-side {
-    animation: fadeIn 600ms ease-out;
+.landing .container .left-side h1 {
+    font-size: 6rem;
+    line-height: 90%;
+    margin-bottom: 2rem;
 }
 
-img {
-    width: auto;
-    height: calc(100vh - 60px);
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.landing .container .left-side h1 span {
+    color: #6699CC;
 }
 
-.left-side {
-    flex: 1;
-    padding-left: 40px;
-    padding-right: 40px;
+.landing .container .left-side h2 {
+    font-family: "Source Code Pro", monospace;
+    font-size: 2rem;
+    line-height: 90%;
+    margin-bottom: 4rem;
 }
 
-.left-side h1 {
-    font-family: 'Single Day', cursive;
-    font-size: 4vw; /* Adjust font size relative to viewport width */
-    text-align: center;
-    position: relative;
+.landing .container .left-side .moto{
+    font-size: 1.6rem;
+    font-family: "Homemade Apple", cursive;
+    background-color: #0B1215;
+    color: #FFFAFA;
+    margin-bottom: 4rem;
 }
 
-.left-side p {
-    width: 90%;
-    font-family: 'Single Day', cursive;
-    font-size: 1.5vw; /* Adjust font size relative to viewport width */
-    line-height: 36px;
+.landing .container .left-side .connection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.landing .left-side a, .collab {
-    color: #000;
+.landing .container .left-side .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: #9ccdff;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 4rem;
+}
+
+.landing .container .left-side .social img {
+    background-color: #FFFAFA;
+    height: 40px;
+    transition: transform 0.3s ease;
+
+    padding: 2px;
+    border: 2px solid #064b6b;
+    border-radius: 50%;
+}
+
+.landing .container .left-side .social img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.landing .container .left-side .social a {
+    display: flex;
+    background-color: #9ccdff;
+    justify-content: center;
+    align-items: center;
+}  
+
+.landing .container .left-side .connection a {
     text-decoration: none;
-    border-bottom: 3px dotted #333; /* Adjust as per your design */
-    display: inline;
-    transform: 300ms;
 }
 
-.left-side span:hover {
-    cursor: url('./images/hand.png'), auto;
-    color: var(--color-primaryLight);
-    border-bottom: 3px dotted #101445;
+.landing .container .left-side .connection button {
+    height: fit-content;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    background-color: yellow;
+    cursor: pointer;
 }
 
-.introgif img{
-    height: calc(33.33vh + 40px);
+.landing .container .left-side .connection button span {
+    background-color: yellow;
+    transition: transform 0.3s ease;
 }
 
-/* ============= Work ================ */
-
-.works {
-    padding: 40px;
+.landing .container .left-side .connection button:hover span {
+    transform: translateX(0.5rem) scale(1.1);
 }
+
+/* ===================================== Works ===================================== */
 
 .works h1 {
-    margin-left: 40px;
-    font-family: 'Single Day', cursive;
-    font-size: 3vw; /* Adjust font size relative to viewport width */
+    text-align: center;
 }
 
-.works a:hover {
-    cursor: url('./images/hand.png'), auto;
-}
-
-.work-container {
+.works .container {
     display: flex;
-    flex-wrap: wrap; /* Allow works to wrap to next row */
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    overflow: hidden; /* Add overflow to enable scrolling if needed */
 }
 
-.work {
-    flex: 1;
+.works .container .work1, .work2, .work3, .work4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    padding: 20px;
-    border: 4px solid rgba(0, 0, 0, 0.1); /* Add border line */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
-    max-width: 30%; /* Adjust the width of each work column */
+    gap: 1rem;
+    width: 40rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: #FFFAFA;
 }
 
-.work:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.works .container img {
+    height: 20rem;
+    max-width: 35rem;
+    background-color: #FFFAFA;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
 
-.work-image {
-    margin-bottom: 20px;
-}
-
-.work-image img {
-    max-width: 80%;
-    height: auto;
-}
-
-.work-image-center img {
-    max-width: 60%;
-    height: auto;
-}
-
-.work-description {
+.works .container h1, p {
+    color: #0B1215;
+    background-color: #FFFAFA;
     text-align: center;
 }
 
-.work-description a, h2 {
-    margin-bottom: 10px;
-    color: black;
-    font-size: 1.5vw; /* Adjust font size relative to viewport width */
+.works .container .work5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 40rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem;
+    background-color: #FFFAFA;
 }
 
-.work-description p {
-    font-size: 1vw; /* Adjust font size relative to viewport width */
-    line-height: 1.5vw; /* Adjust line height relative to viewport width */
-}
+/* ===================================== About ===================================== */
 
-/* ============= About ================ */
-
-.about{
-    padding-top: 1px;
-}
-
-.about h2 {
-    margin-top: 40px;
-    font-family: 'Single Day', cursive;
+.about h1 {
     text-align: center;
-    position: relative;
-    font-size: 2.5vw; /* Adjust font size relative to viewport width */
 }
 
-.about p {
-    margin-top: 40px;
-    font-family: "Fredoka", sans-serif;
-    font-size: 1.25vw;
+.about .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
 
-.about button {
-    width: 200px;
-    height: 50px;
-    border-radius: 16px;
-
-    margin-top: 40px;
-    margin-right: 60px;
-    padding: 8px;
-    font-family: "Fredoka", sans-serif;
-    font-size: 1.4vw; /* Adjust font size relative to viewport width */
-    color: #fff;
-    background-color: var(--color-primaryDark);
-    transition: 300ms;
+.about .container .left-side {
+    border-radius: 2rem;
+    width: 50vw;
+    margin: 4rem;
+    background-color: #FFFAFA;
 }
 
-.about button:hover {
-    background-color: var(--color-primaryLight);
-    cursor: url('./images/hand.png'), auto;
+.about .container .left-side h1 {
+    background-color: #FFFAFA;
+    color: #0B1215;
+    padding-top: 1rem;
+    border-radius: 2rem;
 }
 
-.skills {
-    padding: 10px;
-    background-color: #f1f1f1;
-}
-.skill {
-    margin-bottom: 10px;
-}
-.skill-label {
-    margin-bottom: 5px;
-}
-.skill-bar {
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.skill-bar-fill {
-    height: 100%;
-    background-color: var(--color-primaryLight);
-    transition: width 1s ease-in-out;
+.about .container .left-side p {
+    text-align: left;
+    padding-top: 1rem;
+    padding-inline: 2rem;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    line-height: 170%;
+    color: #292727;
 }
 
-/* ============= Certifications ================ */
-
-.certifications {
-    padding: 20px;
-    height: 100vh;
+.about .container .left-side button {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    color: #FFFAFA;
+    background-color: #064b6b;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 75%;
+    transition: transform 0.3s ease;
 }
 
-.carousel {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    width: 60vw; /* Adjust width relative to viewport width */
-    height: 80vh; /* Adjust height relative to viewport height */
-    border: 4px solid #000;
-    border-radius: 12px;
+.about .container .left-side button span {
+    background-color: #064b6b;
 }
 
-.carousel img {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.carousel img.active {
-    opacity: 1;
-}
-
-.carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: var(--color-dark);
-    border: none;
+.about .container .left-side button:hover {
     cursor: pointer;
-    font-size: 2vw; /* Adjust font size relative to viewport width */
-    margin-left: 8px;
-    margin-right: 8px;
-    outline: none;
+    transform: scale(1.1);
 }
 
-.carousel button:hover {
-    scale: 110%;
-    cursor: url('./images/hand.png'), auto;
+.about .container .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-inline: 4rem;
 }
 
-.carousel button.prev {
-    left: 0;
+.about .container .right-side h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: bold;
+    font-size: 1rem;
+    color: #0B1215;
+    width: fit-content;
+    padding-inline: 1rem;
+    background: yellow;
+    border-radius: 1rem;
 }
 
-.carousel button.next {
-    right: 0;
+.about .container .right-side .programming {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
 }
 
-/* ============= Connect ================ */
+.about .container .right-side img {
+    width: 4rem;
+}
+
+figure {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* ===================================== Certificattions ===================================== */
+
+.certifications .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 4rem;
+}
+
+.certifications h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.certifications .container .cert1, .cert2, .cert3, .cert4, .cert5, .cert6 {
+    width: 25vw;
+    margin: 1rem;
+}
+
+.certifications .container img {
+    width: 25vw;
+    height: 30vh;
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px 0 rgb(186, 186, 186), 0 6px 12px 0 rgba(186, 186, 186);
+}
+
+/* ===================================== Connect ===================================== */
 
 .connect {
-    background-image: url(./images/connect-bg.jpg);
     height: 100vh;
-}
-
-.columns {
     display: flex;
-    padding-top: 10%;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.column {
-    flex: 1;
-    padding: 2%;
-    box-sizing: border-box;
+.connect .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8rem;
 }
 
-.contact-links {
-    order: 1;
-    max-width: 40%;
+.connect .container .left-side {
+    width: 40vw;
+}
+
+.connect .container .left-side img {
+    border-radius: 1rem;
+}
+
+.connect .container .right-side {
+    color: #FFFAFA;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 6%;
-    padding-left: 6%;
-    border-radius: 3vw;
-    background-color: rgba(255, 255, 255, 0.4);
+    align-items: center;
 }
 
-.letsworktogether {
-    order: 2;
-    max-width: 40%;
-}
-
-.row {
-    margin-top: 2%;
-}
-
-.social-icons {
-    display: flex;
-}
-
-.social-icons img {
-    max-width: 4vw;
-    max-height: 4vw;
-    margin-right: 40px;
-}
-
-.social-icons a, img:hover {
-    cursor: url('./images/hand.png'), auto;
-}
-
-.letsworktogether {
-    width: 50%;
-    padding: 2%;
-    border: 1px solid #ddd;
-    border-radius: 3vw;
-    box-shadow: 0 2vw 2.5vw rgba(0, 0, 0, 0.1);
-    background-color: #f3f3f3;
-    margin: 0 auto;
-}
-
-h1 {
+.connect .container .right-side h1 {
     text-align: center;
-    margin-bottom: 2%;
-    font-family: 'Single Day', cursive;
-    font-size: 2.5vw;
+    padding: 0.5rem;
+    padding-inline: 4rem;
+    width: fit-content;
+    color: #0B1215;
+    background-color: yellow;
+    border-radius: 2rem;
 }
 
-label {
-    display: block;
-    margin-bottom: 1%;
+.connect .container .right-side p {
+    background-color: #0B1215;
+    color: #FFFAFA;
+    margin-top: 1rem;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 2%;
-    padding: 1%;
-    border: 1px solid #ccc;
-    border-radius: 1vw;
-    box-sizing: border-box;
-}
-
-textarea {
-    height: 60px;
-}
-
-.submit-button {
+.connect .container .right-side form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    height: 40px;
+    font-family: "Poppins", sans-serif;
+    color: #FFFAFA;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid #FFFAFA;
 }
 
-.submit-button button {
-    background-color: var(--color-primaryDark);
-    color: white;
-    padding: 1% 2%;
-    border: none;
-    border-radius: 1vw;
-    cursor: url('./images/hand.png'), auto;
+.connect .container .right-side form .row, .col, label, input, textarea {
+    color: #FFFAFA;
 }
 
-.submit-button button:hover {
-    background-color: #003b8b;
+.connect .container .right-side form .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.connect .container .right-side form input {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #FFFAFA;
+    font-family: "Poppins", sans-serif;
+}
+
+.connect .container .right-side form textarea {
+    padding: 1rem;
+    border-radius: 1rem;
+    width:24vw;
+    height: 10vh;
+    border: 1px solid #FFFAFA;
+    font-family: "Poppins", sans-serif;
+}
+
+.connect .container .right-side form button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #25D366;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+  
+.connect .container .right-side form button:hover {
+    cursor: pointer;
+    background-color: #25D366;
+    color: #FFFAFA;
+}
+
+/* ===================================== Footer ===================================== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #101a1e;
+    padding: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+footer * {
+    background-color: #101a1e;
+}
+
+footer .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .name img {
+    width: 40px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 4rem;
+}
+
+footer ul li {
+    font-family: "Poppins", sans-serif;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #81c0ff;
+    transition: color 0.3s ease;
+}
+
+footer ul a:hover {
+    color: #FFFAFA;
+}
+
+footer .social {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+footer .social img {
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #FFFAFA;
+}
+
+footer p {
+    color: aliceblue;
 }

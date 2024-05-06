@@ -13,29 +13,52 @@
     <meta property="og:url" content="URL of your website">
     <meta name="twitter:card" content="summary_large_image">
 
+    <link rel="shortcut icon" href="./profile.jpg" type="image/x-icon">
+
     <link rel="stylesheet" href="./styles.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 </head>
+
 <body>
+    
     <header>
+        <h1><img src="./images/logo.png" alt="">Gautham C Sudheer</h1>
+
         <ul>
-          <li><a href="#" class="active">Home</a></li>
+          <li class="active"><a href="#home" class="active">Home</a></li>
           <li><a href="#works">Works</a></li>
-          <li><a href="#about" target="_blank">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#connect">Contact</a></li>
+          <li><a href="#connect">Connect</a></li>
         </ul>
+
+        <button onclick="openPdfInNewTab()">Resume <span class="material-symbols-outlined">article</span></button>
     </header>
 
-    <!-- Container for left and right side -->
-    <section class="landing">
+    <section id="home" class="landing">
         <div class="container">
             <div class="left-side">
-                <h1>Gautham C Sudheer</h1>
-                <p>As a web developer, UI designer, and teacher, I bring 3 years of coding experience to craft user-centric and inclusive digital experiences. <a href="#connect"><span class="collab">Let's collaborate</span></a> and build something amazing together!</p>
-            
-                <div class="introgif"><img src="./images/intro1.gif" alt="introgif"></div>
+                <h1>Gautham<br>C Sudheer <span>.</span></h1>
+                <h2>Web Developer | UI Designer | Teacher</h2>
+                <p class="moto">Crafting elegant solutions - one line of code at a time</p>
+                <div class="connection">
+                    <div class="social">
+                        <a href="https://github.com/gauthamcsudheer" target="_blank"><img src="./images/github.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/gauthamcsudheer/" target="_blank"><img src="./images/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/gauthamcsudheer/" target="_blank"><img src="./images/instagram.png" alt="instagram"></a>
+                    </div>
+                    <a href="#works">
+                        <button>
+                            Explore
+                            <span class="material-symbols-outlined">
+                                arrow_circle_right
+                            </span>
+                        </button>
+                    </a>
+                    
+                </div>
                 
             </div>
             <div class="right-side">
@@ -43,157 +66,186 @@
             </div>
         </div>
     </section>
-    
-    <!-- Works section -->
+
     <section id="works" class="works">
-        <h1>My Works</h1>
-        <div class="work-container">
-            <div class="work">
-                <div class="work-image">
-                    <img src="./images/dbms.png" alt="Work 1">
-                </div>
-                <div class="work-description">
-                    <a href="https://youtu.be/nK1ue5w55CQ" target="_blank"><h2>Bank Management System</h2></a>
-                    <p>
-                        The Django-powered Bank Management System revolutionizes banking operations by ensuring secure account management and transparent transactions. It accurately handles key operations like deposits, withdrawals, transfers, and transaction histories. The system offers robust managerial tools for customer oversight, improving functionality, security, and reliability in banking operations.</p>
-                </div>
+        <h1 class="works-h1">My Works</h1>
+        <div class="container">
+            <div class="work1">
+                <img src="./images/reconect.png" alt="alumni">
+                <h1>ReConnect - Alumni Website</h1>
+                <p>Designed and developed a comprehensive website for a college alumni association, facilitating communication, networking, and information sharing among alumni. Implemented user-friendly interfaces using HTML, CSS, and JavaScript, along with backend functionalities using Django, ensuring a seamless user experience across devices.</p>
             </div>
-            <div class="work">
-                <div class="work-description">
-                    <a href="https://www.youtube.com/watch?v=dn0a8EjAYN0" target="_blank"><h2>GCall - Meeting App</h2></a>
-                    <p>The Jitsi-based video calling app offers a seamless virtual meeting experience similar to Google Meet. It provides high-quality video and audio, robust screen sharing, and real-time collaboration. Users can easily create, join, and manage meetings, ensuring privacy through encryption.</p>
-                </div>
-                <div class="work-image-center">
-                    <img src="./images/gcall.jpg" alt="Work 2">
-                </div>
+            <div class="work2">
+                <h1>Bharatham '24 Official Website</h1>
+                <p>Passionate about exploring the intersection of art and technology, leveraging innovative tools and techniques to create immersive online experiences for audiences. Crafted intuitive interfaces using HTML, CSS, and JavaScript for frontend development, leveraging React to build dynamic and interactive components.</p>
+                <img src="./images/bharatham24.png" alt="bharatham24">
             </div>
-            <div class="work">
-                <div class="work-image">
-                    <img src="./images/hackclub.png" alt="Work 3">
-                </div>
-                <div class="work-description">
-                    <a href="https://github.com/gauthamcsudheer/hack-club" target="_blank"><h2>Hack Club Website</h2></a>
-                    <p>The Hack Club website is a dynamic platform designed for a college club, offering features like event scheduling, team profiles, and interactive forums. Utilizing HTML, CSS, and JavaScript, the site enhances club engagement and communication. Its user-friendly interface and responsive design ensure accessibility across devices, fostering a cohesive online community for members to connect, collaborate, and stay updated with club activities.</p>
+            <div class="work3">
+                <h1>Hack Club RSET Website</h1>
+                <p>A dynamic website for a college club, integrating features such as event scheduling, team profiles, and interactive forums to enhance club engagement and communication. Utilized front-end technologies like HTML, CSS, and JavaScript  to create a user-friendly and responsive web platform.</p>
+                <img src="./images/hackclub.png" alt="hackclub">
+            </div>
+            <div class="work4">
+                <img src="./images/dbms.png" alt="dbms">
+                <h1>Bank Management System</h1>
+                <p>Deposit, withdrawal, transfer and comprehensive transaction history feature for tracking and reviewing financial activities. Manager dashboard for efficient customer listing, customer detailing, and record creation, with the ability to delete customer accounts for data integrity and compliance</p>
+            </div>
+            <div class="work5">
+                <img src="./images/gcall.jpg" alt="gcall">
+                <div class="work-details">
+                    <h1>GCall</h1>
+                    <p>GCall stands out as a user-friendly video calling alternative, offering a reliable communication platform powered by the Jitsi API. Developed in Java using Android Studio, GCall ensures a seamless and immersive video calling experience for Android users, enhancing connectivity and convenience.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section id="about" class="about">
         <div class="container">
-            <div class="right-side">
-                <img src="./images/about.png" alt="Gautham C Sudheer - Web Developer and UI Designer">
-            </div>
             <div class="left-side">
-                <h2>"Crafting elegant solutions, one line of code at a time"</h2>
+                <h1>About</h1>
                 <p>I'm a Computer Science & Engineering student at Rajagiri School of Engineering & Technology, driven to help others showcase their skills online. My projects have taught me to collaborate with diverse groups, improving my interpersonal skills. I've created websites focusing on life skills like teamwork and communication. Website and app development introduced me to the creative industry, inspiring my entrepreneurial ventures. I excel in front-end development and building strong client relationships, with a deep understanding of client service.</p>
-            
-                <div class="skills">
-                    <div class="skill">
-                        <div class="skill-label">HTML, CSS, JS</div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">C</div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">Java</div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill-label">Djano</div>
-                        <div class="skill-bar">
-                            <div class="skill-bar-fill" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <button onclick="openPdfInNewTab()">Open Resume</button>
-                <a href="#connect"><button class="explore">Connect</button></a>
+                <button onclick="openPdfInNewTab()">Downlaod CV
+                    <span class="material-symbols-outlined">
+                        download
+                    </span>
+                </button>
             </div>
+            <div class="right-side">
+                
+                <h1 class="abt-h1">Programming</h1>
+                <div class="programming">
+                    <figure>
+                        <img src="./images/c.png" alt="c-programming">
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/python.png" alt="python">
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/java.png" alt="java">
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+                </div>
 
-        </div>
-    </section>
+                <h1 class="abt-h1">Front-End</h1>
+                <div class="programming">
+                    <figure>
+                        <img src="./images/html.png" alt="html">
+                        <figcaption>Expert</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/css.png" alt="css">
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/js.png" alt="js">
+                        <figcaption>Beginner</figcaption>
+                    </figure>
+                </div>
 
-    
-    <section id="certifications" class="certifications">
-        <div class="carousel">
-            <img src="./certificates/elementsofai.png" alt="Certification 1" class="active">
-            <img src="./certificates/pythonos.png" alt="Certification 2">
-            <img src="./certificates/grasshopper.png" alt="Certification 3">
-            <button class="prev"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
-            <button class="next"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
-          </div>
-    </section>
-
-
-    <section id="connect" class="connect">
-        <div class="columns">
-            <div class="column contact-links">
-                <div class="row">
-                    <h2>My Address</h2>
-                    <p><a href="https://www.rajagiritech.ac.in/Home/Index.asp">Rajagiri School of Engineering & Technology</a><br>
-                        Rajagiri Valley, Kakkanad, Kochi<br>
-                        Kerala - 682039
-                    </p>
-                </div>
-                <div class="row">
-                    <h2>Social Media</h2>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/gauthamcsudheer" target="_blank"><img src="./images/instagram.png" alt="Instagram" width="32" height="32"></a>
-                        <a href="https://www.linkedin.com/in/gauthamcsudheer" target="_blank"><img src="./images/linkedin.png" alt="LinkedIn" width="32" height="32"></a>
-                        <a href="https://github.com/gauthamcsudheer" target="_blank"><img src="./images/github.png" alt="GitHub" width="32" height="32"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="column letsworktogether">
-                <h1>Let's work together!</h1>
-            <form action="https://formspree.io/f/xnqedzvv"
-            method="POST">
-                <div class="row">
-                    <div class="col">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="col">
-                        <label for="company">Company:</label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="message">Message:</label>
-                        <textarea name="message" required></textarea>
-                    </div>
-                </div>
-                <div class="submit-button">
-                    <button type="submit">Connect</button>
+                <h1 class="abt-h1">Back-End</h1>
+                <div class="programming">
+                    <figure>
+                        <img src="./images/django.png" alt="django">
+                        <figcaption>Intermediate</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./images/mysql.png" alt="mysql">
+                        <figcaption>Beginner</figcaption>
+                    </figure>
                 </div>
                 
-            </form>
             </div>
         </div>
     </section>
-    
+
+    <section id="certifications" class="certifications">
+        <h1>Certifications</h1>
+        <div class="container">
+            <div class="cert1">
+                <img src="./certificates/webpython.jpg" alt="rset_python">
+            </div>
+            <div class="cert2">
+                <img src="./certificates/frontend.png" alt="meta_frontend">
+            </div>
+            <div class="cert3">
+                <img src="./certificates/elementsofai.png" alt="elementsofai">
+            </div>
+            <div class="cert4">
+                <img src="./certificates/pythonos.png" alt="python_os">
+            </div>
+            <div class="cert5">
+                <img src="./certificates/intro_to_ml.jpg" alt="kaggle_ml">
+            </div>
+            <div class="cert6">
+                <img src="./certificates/grasshopper.png" alt="grasshopper">
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="connect">
+        <div class="container">
+            <div class="left-side">
+                <img src="./images/card.png" alt="connect-card">
+            </div>
+            <div class="right-side">
+                <h1>Let's talk</h1>
+                <p>Do you have a project in your mind? Contact me here</p>
+                <form action="https://formspree.io/f/xnqedzvv" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="col">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-button">
+                        <button>
+                            Connect
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="name">
+            <img src="./images/logo.png" alt="logo">
+            <h1>Gautham C Sudheer</h1>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#connect">Connect</a></li>
+        </ul>
+        <div class="social">
+            <a href="https://github.com/gauthamcsudheer" target="_blank"><img src="./images/githubW.png" alt="github"></a>
+            <a href="https://www.linkedin.com/in/gauthamcsudheer/" target="_blank"><img src="./images/linkedin.png" alt="linkedin"></a>
+            <a href="https://www.instagram.com/gauthamcsudheer/" target="_blank"><img src="./images/instagram.png" alt="instagram"></a>
+        </div>
+        <p>&copy; 2024 Gautham C Sudheer. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script>
         function openPdfInNewTab() {
             window.open('./Resume.pdf', '_blank');
         }
-        </script>
-    <script src="main.js"></script>
+    </script>
+
+    <script src="./main.js"></script>
+
 </body>
 </html>
