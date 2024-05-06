@@ -87,3 +87,10 @@ document.addEventListener("DOMContentLoaded", function() {
         sr.reveal('.cert6', { origin: 'right' });
     }
 });
+
+const menuBtn = document.getElementById('menu-btn');
+const navUl = document.querySelector('header ul');
+
+menuBtn.addEventListener('click', () => {
+  navUl.classList.toggle('show');
+});
