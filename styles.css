@@ -151,6 +151,10 @@ header.sticky {
     margin-bottom: 4rem;
 }
 
+.landing .container .left-side h2 .break {
+    display: none;
+}
+
 .landing .container .left-side .moto{
     font-size: 1.6rem;
     font-family: "Homemade Apple", cursive;
@@ -589,4 +593,191 @@ footer .social img {
 
 footer p {
     color: aliceblue;
+}
+
+
+/* ============================= Mobile - Responsive ===================== */
+
+
+@media (max-width: 768px) {
+
+    /* Responsive Styles for Mobile Screens */
+
+/* General Styles */
+
+* {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+section {
+    margin-top: 1rem;
+}
+
+body {
+    font-size: 16px; /* Set base font size for better readability on mobile */
+}
+
+/* Header Styles */
+header {
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+header h1 {
+    margin-left: 0; /* Center align the logo and name */
+    font-size: 1rem;
+}
+
+header ul {
+    display: none;
+}
+
+header button {
+    display: none;
+}
+
+/* Landing Section Styles */
+.landing .container {
+    flex-direction: column;
+    height: auto; /* Remove fixed height */
+}
+
+.landing .container .left-side h1 {
+    font-size: 4rem;
+    padding-inline: 1.8rem;
+}
+
+.landing .container .left-side h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.landing .container .left-side .moto {
+    padding-inline: 2rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.landing .container .left-side .connection {
+    scale: 0.75;
+    gap: 2rem;
+}
+
+.landing .container .right-side img {
+    height: 60vh; /* Allow image height to adjust based on content */
+    max-width: 100%; /* Ensure image doesn't overflow */
+    margin-top: 2rem; /* Add space between image and text */
+}
+
+/* Works Section Styles */
+.works .container .work1, .work2, .work3, .work4, .work5 {
+    width: 90%; /* Adjust width for better fit on mobile screens */
+}
+
+.works .container .work5 {
+    flex-direction: column;
+}
+
+.works .container img {
+    width: 100%; /* Make images responsive */
+    height: 90%;
+}
+
+/* About Section Styles */
+
+
+.about .container {
+    flex-direction: column;
+    margin-inline: 2rem;
+    overflow-y: hidden;
+}
+
+.about .container .left-side, .about .container .right-side {
+    width: 100%; /* Adjust width for better fit on mobile screens */
+}
+
+.about .container .left-side h1 {
+    font-size: 2rem;
+}
+
+.about .container .left-side p {
+    font-size: 1.1rem;
+}
+
+.about .container .left-side button {
+    margin-inline: auto; /* Center align the button */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Certifications Section Styles */
+
+.certifications .container {
+    padding-inline: 2rem;
+}
+
+.certifications .container .cert1, .cert2, .cert3, .cert4, .cert5, .cert6 {
+    width: 90%; /* Adjust width for better fit on mobile screens */
+}
+
+.certifications .container img {
+    width: 100%; /* Make images responsive */
+    height: 90%;
+}
+
+/* Connect Section Styles */
+
+.connect {
+    height: auto;
+}
+
+.connect .container {
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.connect .container .left-side, .right-side {
+    width: 95vw;
+}
+
+.connect .container .left-side img {
+    margin: 0.5rem;
+    width: 90vw; /* Make image responsive */
+}
+
+.connect .container .right-side form {
+    width: 70vw;
+}
+
+.connect .container .right-side form .row {
+    flex-direction: column;
+}
+
+.connect .container .right-side form textarea {
+    width: 85%; /* Make textarea responsive */
+}
+
+.connect .container .right-side form button {
+    margin: 1rem auto; /* Center align the button */
+}
+
+/* Footer Styles */
+
+footer h1 {
+    font-size: 1.5rem;
+}
+
+footer ul {
+    /* flex-direction: column; */
+    text-align: center;
+    gap: 1rem;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
 }

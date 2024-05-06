@@ -29,32 +29,61 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.explore-button').addEventListener('click', smoothScroll); // Add smooth scroll to 'Explore Now' button
     document.querySelectorAll('footer ul li').forEach((li) => li.addEventListener('click', smoothScroll)); // Add smooth scroll to footer links
     changeNav(); // Update active link on initial load
+
+    // Initialize ScrollReveal only for screens wider than 768px
+    if (window.innerWidth > 768) {
+        let sr = ScrollReveal({
+            distance: '40px',
+            duration: 1500,
+            reset: true
+        });
+
+        sr.reveal('.left-side', { origin: 'top' });
+        sr.reveal('.right-side', { origin: 'right' });
+
+        sr.reveal('.works-h1', { origin: 'top' });
+
+        sr.reveal('.work1', { origin: 'left' });
+        sr.reveal('.work2', { origin: 'right' });
+        sr.reveal('.work3', { origin: 'left' });
+        sr.reveal('.work4', { origin: 'right' });
+        sr.reveal('.work5', { origin: 'bottom' });
+
+        sr.reveal('.abt-h1', { origin: 'top' });
+        sr.reveal('.programming', { origin: 'top' });
+
+        sr.reveal('.cert1', { origin: 'left' });
+        sr.reveal('.cert2', { origin: 'top' });
+        sr.reveal('.cert3', { origin: 'right' });
+        sr.reveal('.cert4', { origin: 'left' });
+        sr.reveal('.cert5', { origin: 'bottom' });
+        sr.reveal('.cert6', { origin: 'right' });
+    } else {
+        let sr = ScrollReveal({
+            distance: '40px',
+            duration: 1500,
+            reset: true
+        });
+
+        sr.reveal('.left-side', { origin: 'top' });
+        sr.reveal('.right-side', { origin: 'bottom' });
+
+        sr.reveal('.works-h1', { origin: 'top' });
+
+        sr.reveal('.work1', { origin: 'left' });
+        sr.reveal('.work2', { origin: 'right' });
+        sr.reveal('.work3', { origin: 'left' });
+        sr.reveal('.work4', { origin: 'right' });
+        sr.reveal('.work5', { origin: 'left' });
+
+        sr.reveal('.abt-h1', { origin: 'top' });
+        sr.reveal('.programming', { origin: 'top' });
+
+        sr.reveal('.cert1', { origin: 'left' });
+        sr.reveal('.cert2', { origin: 'right' });
+        sr.reveal('.cert3', { origin: 'left' });
+        sr.reveal('.cert4', { origin: 'right' });
+        sr.reveal('.cert5', { origin: 'left' });
+        sr.reveal('.cert6', { origin: 'right' });
+    }
 });
-
-// ScrollReveal initialization and animations
-sr = ScrollReveal({
-    distance: '40px',
-    duration: 2000,
-    reset: true
-});
-
-sr.reveal('.left-side', {origin: 'top'});
-sr.reveal('.right-side', {origin: 'right'});
-
-sr.reveal('.works-h1', {origin: 'top'});
-
-sr.reveal('.work1', {origin: 'left'});
-sr.reveal('.work2', {origin: 'right'});
-sr.reveal('.work3', {origin: 'left'});
-sr.reveal('.work4', {origin: 'right'});
-sr.reveal('.work5', {origin: 'bottom'});
-
-sr.reveal('.abt-h1', {origin: 'top'});
-sr.reveal('.programming', {origin: 'top'});
-
-sr.reveal('.cert1', {origin: 'left'});
-sr.reveal('.cert2', {origin: 'top'});
-sr.reveal('.cert3', {origin: 'right'});
-sr.reveal('.cert4', {origin: 'left'});
-sr.reveal('.cert5', {origin: 'bottom'});
-sr.reveal('.cert6', {origin: 'right'});
