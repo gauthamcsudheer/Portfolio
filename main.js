@@ -13,7 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function smoothScroll(e) {
         e.preventDefault();
-        const targetId = this.querySelector('a').getAttribute('href').substring(1);
+        let targetId;
+        if (this.classList.contains('explore-button')) {
+            targetId = 'works'; // Target the 'works' section for the 'Explore Now' button
+        } else {
+            targetId = this.querySelector('a').getAttribute('href').substring(1);
+        }
         const targetSection = document.getElementById(targetId);
         targetSection.scrollIntoView({ behavior: 'smooth' });
         changeNav(); // Update active link after smooth scroll
@@ -21,10 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', changeNav);
     navLinks.forEach((li) => li.addEventListener('click', smoothScroll));
+    document.querySelector('.explore-button').addEventListener('click', smoothScroll); // Add smooth scroll to 'Explore Now' button
+    document.querySelectorAll('footer ul li').forEach((li) => li.addEventListener('click', smoothScroll)); // Add smooth scroll to footer links
     changeNav(); // Update active link on initial load
 });
 
-
+// ScrollReveal initialization and animations
 sr = ScrollReveal({
     distance: '40px',
     duration: 2000,
