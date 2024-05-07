@@ -682,6 +682,7 @@ header button {
 .landing .container {
     flex-direction: column;
     height: auto; /* Remove fixed height */
+    margin-inline: 0;
 }
 
 .landing .container .left-side h1 {
@@ -702,8 +703,11 @@ header button {
 }
 
 .landing .container .left-side .connection {
-    scale: 0.75;
+    width: 100%;
+    scale: 0.7;
     gap: 2rem;
+    margin-inline: 0;
+    flex-wrap: wrap;
 }
 
 .landing .container .right-side img {
