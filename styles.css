@@ -369,6 +369,7 @@ header.sticky {
 .about .container .right-side .programming {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
     gap: 2rem;
@@ -710,6 +711,12 @@ header button {
     flex-wrap: wrap;
 }
 
+.landing .container .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .landing .container .right-side img {
     height: 60vh; /* Allow image height to adjust based on content */
     max-width: 100%; /* Ensure image doesn't overflow */
@@ -755,6 +762,12 @@ header button {
     margin-inline: auto; /* Center align the button */
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.about .container .right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Certifications Section Styles */
