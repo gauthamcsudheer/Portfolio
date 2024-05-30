@@ -141,6 +141,7 @@ header.sticky {
     font-size: 6rem;
     line-height: 90%;
     margin-bottom: 2rem;
+    height: fit-content;
 }
 
 .landing .container .left-side h1 span {
@@ -687,6 +688,10 @@ header button {
 }
 
 .landing .container .left-side h1 {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    overflow-y: hidden;
     font-size: 4rem;
     padding-inline: 1.8rem;
 }
@@ -694,6 +699,8 @@ header button {
 .landing .container .left-side h2 {
     font-size: 1rem;
     text-align: center;
+    height: auto;
+    overflow-y: hidden;
     margin-bottom: 2rem;
 }
 
@@ -742,6 +749,7 @@ header button {
 
 .about .container {
     flex-direction: column;
+    flex-wrap: wrap
     margin-inline: 2rem;
     overflow-y: hidden;
 }
