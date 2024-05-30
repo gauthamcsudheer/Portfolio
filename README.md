@@ -33,10 +33,6 @@ Driven by a passion for helping others showcase their skills online, I excel in 
 - Effective Communication
 - Collaboration
 
-## Languages
-- English
-- Malayalam
-
 ## Certifications
 - Elements of AI
 - Crash Course on Python
