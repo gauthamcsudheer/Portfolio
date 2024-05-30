@@ -749,7 +749,7 @@ header button {
 
 .about .container {
     flex-direction: column;
-    flex-wrap: wrap
+    flex-wrap: wrap;
     margin-inline: 2rem;
     overflow-y: hidden;
 }
