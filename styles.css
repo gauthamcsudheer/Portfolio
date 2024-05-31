@@ -11,6 +11,24 @@
     }
 }
 
+::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #838383; /* Background of the scrollbar track */
+  border-radius: 2px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff707; /* Scrollbar color */
+  border-radius: 2px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b8cc; /* Darker blue when hovered */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -141,7 +159,6 @@ header.sticky {
     font-size: 6rem;
     line-height: 90%;
     margin-bottom: 2rem;
-    height: fit-content;
 }
 
 .landing .container .left-side h1 span {
@@ -623,6 +640,10 @@ body {
     font-size: 16px; /* Set base font size for better readability on mobile */
 }
 
+button span {
+  overflow: hidden;
+}
+
 /* Header Styles */
 header {
     flex-direction: column;
@@ -688,20 +709,16 @@ header button {
 }
 
 .landing .container .left-side h1 {
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    overflow-y: hidden;
     font-size: 4rem;
     padding-inline: 1.8rem;
+    overflow: hidden;
 }
 
 .landing .container .left-side h2 {
     font-size: 1rem;
     text-align: center;
-    height: auto;
-    overflow-y: hidden;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .landing .container .left-side .moto {
@@ -749,7 +766,6 @@ header button {
 
 .about .container {
     flex-direction: column;
-    flex-wrap: wrap;
     margin-inline: 2rem;
     overflow-y: hidden;
 }
