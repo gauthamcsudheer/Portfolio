@@ -263,6 +263,10 @@ header.sticky {
     align-items: center;
 }
 
+.works .container a {
+    color: #0B1215;
+}
+
 .works .container .work1, .work2, .work3, .work4 {
     display: flex;
     flex-direction: column;
