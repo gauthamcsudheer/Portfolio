@@ -443,6 +443,12 @@ figcaption {
     height: 30vh;
     border-radius: 1rem;
     box-shadow: 0 4px 4px 0 rgb(186, 186, 186), 0 6px 12px 0 rgba(186, 186, 186);
+    transition: scale 0.3s ease;
+}
+
+.certifications .container img:hover {
+    cursor: pointer;
+    scale: 1.05;
 }
 
 /* ===================================== Connect ===================================== */
